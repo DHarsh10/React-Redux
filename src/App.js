@@ -10,6 +10,9 @@ function App() {
 
   const isLoggedIn  = useSelector(state => state.auth.isLoggedin);
 
+  const cartItems = useSelector(state => state.cartSlice.itemsList);
+
+  console.log(cartItems)
   return (
     <div className="App">
       {!isLoggedIn && <Auth />}
